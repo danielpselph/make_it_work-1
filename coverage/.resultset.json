@@ -242,12 +242,31 @@
         "lines": [
           1,
           null,
+          1,
+          null,
+          null,
           null
         ]
       },
       "/Users/danielselph/turing/challenge_practice/make_it_work-1/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/danielselph/turing/challenge_practice/make_it_work-1/spec/models/challenge_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -344,8 +363,24 @@
           1,
           null
         ]
+      },
+      "/Users/danielselph/turing/challenge_practice/make_it_work-1/app/controllers/projects_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/danielselph/turing/challenge_practice/make_it_work-1/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1589555586
+    "timestamp": 1589556504
   }
 }
