@@ -49,8 +49,37 @@ RSpec.describe "projects show page" do
 
       expect(page).to have_content("Contestants Average Years of Experience: 13") 
     end
+
+    it "can add a contestant to a project" do
+      
+      visit "/projects/#{@boardfit.id}"
+
+      fill_in :contestant_id, with: "#{@jay.id}"
+
+      click_button "Add Contestant To Project"
+
+      expect(current_path).to eq("/projects/#{@boardfit.id}") 
+
+      expect(page).to have_content("Number of Contestants: 2") 
+
+      visit '/contestants'
+
+      within ".contestant-#{@jay.id}" do 
+        expect(page).to have_content(@jay.name)
+        expect(page).to have_content(@news_chic.name)
+        expect(page).to have_content(@boardfit.name)
+      end
+
+    end
+    
   end
 end
-# As a visitor,
-# When I visit a project's show page
-# I see the average years of experience for the contestants that worked on that project
+
+# I see a form to add a contestant to this project
+# When I fill out a field with an existing contestants id
+# And hit "Add Contestant To Project"
+# I'm taken back to the project's show page
+# And I see that the number of contestants has increased by 1
+# And when I visit the contestants index page
+# I see that project listed under that contestant's name
+# ```

@@ -2,4 +2,10 @@
 <p>Material: <%= @project.material %></p>
 <p>Challenge Theme: <%= @project.challenge.theme %></p>
 <p>Number of Contestants: <%= @project.total_count %></p>
-<p>Contestants Average Years of Experience: <%= @project.experience %>
+<p>Contestants Average Years of Experience: <%= @project.experience %></p>
+<h3>Add a New Contestant</h3>
+<%= form_tag("/projects/#{@project.id}/add_contestant", method: :post) do %>
+  <%= label_tag :contestant_id %>
+  <%= text_field_tag :contestant_id %>
+  <%= submit_tag "Add Contestant To Project" %>
+<% end %>
