@@ -8,5 +8,10 @@ class Project <ApplicationRecord
   # binding.pry
   contestants.count
   end
+
+  def experience
+    contestants.average(:years_of_experience)
+  end
+  
   
 end
