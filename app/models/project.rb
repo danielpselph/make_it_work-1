@@ -3,4 +3,10 @@ class Project <ApplicationRecord
   belongs_to :challenge
   has_many :contestant_projects
   has_many :contestants, through: :contestant_projects
+
+  def total_count
+  # binding.pry
+  contestants.count
+  end
+  
 end
